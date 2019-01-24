@@ -1,28 +1,21 @@
+import {Context} from 'koa';
+import * as Serve from 'koa-static';
 import {
-  AwesomeStaticOptions,
   AwesomeStaticMiddleware,
-  NextFunction
-} from "./types";
-import * as Serve from "koa-static";
-import { Context } from "koa";
+  AwesomeStaticOptions,
+  NextFunction,
+} from './types';
 
 function processOptions(options?: AwesomeStaticOptions): AwesomeStaticOptions {
   options = (options && Object.assign({}, options)) || {};
-  options.index || (options.index = "index.html");
-  options.allowMethods || ["GET", "HEAD"];
+  options.index || (options.index = 'index.html');
+  options.allowMethods || ['GET', 'HEAD'];
 
   return options;
 }
 
-function AwesomeStatic(
-  root: string,
-  options?: AwesomeStaticOptions
-): AwesomeStaticMiddleware {
+function AwesomeStatic(root: string, options?: AwesomeStaticOptions) {
   options = processOptions(options);
-
-  return async (ctx: Context, next: NextFunction) => {
-    await Serve(root, options)(ctx, next);
-  };
 }
 
 export default AwesomeStatic;
