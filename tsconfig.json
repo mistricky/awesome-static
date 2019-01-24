@@ -1,10 +1,11 @@
 {
+  "extends": "./node_modules/@magicspace/configs/tsconfig.json",
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
     "rootDir": "./src",
     "outDir": "./bld",
-    "lib": ["esnext"]
+    "lib": ["esnext", "es2015"]
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["node_modules"]
