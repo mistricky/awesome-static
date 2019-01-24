@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "./bld/main.js",
   "license": "MIT",
+  "files": ["dist", "package.json"],
   "devDependencies": {
     "@magicspace/configs": "^0.1.46",
     "@types/koa": "^2.0.48",
