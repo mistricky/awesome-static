@@ -7,10 +7,14 @@
     "@magicspace/configs": "^0.1.46",
     "@types/koa": "^2.0.48",
     "@types/koa-send": "^4.1.1",
-    "@types/koa-static": "^4.0.0"
+    "@types/koa-static": "^4.0.0",
+    "typescript": "^3.2.4"
   },
   "dependencies": {
     "koa": "^2.6.2",
-    "prettier": "^1.16.1"
+    "prettier": "^1.16.1",
+    "tslib": "^1.9.3",
+    "tslint": "^5.12.1",
+    "tslint-language-service": "^0.9.9"
   }
 }
