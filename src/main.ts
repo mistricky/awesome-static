@@ -65,7 +65,9 @@ function generateMiddleware(
     let parsedUrl = (result && result[1]) || url;
 
     if (
-      allowMethods!.includes(method as HTTPMethod) &&
+      allowMethods!
+        .map(method => method.toUpperCase())
+        .includes(method as HTTPMethod) &&
       matchRoute(parsedUrl, route || '/')
     ) {
       try {
