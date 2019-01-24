@@ -45,7 +45,7 @@ See `/example`.
 
 ## API
 
-```
+```javascript
 AwesomeStatic(root, options)
 ```
 
