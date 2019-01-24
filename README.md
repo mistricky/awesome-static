@@ -1,4 +1,6 @@
 # Awesome-Static
+![TypeScript](https://badges.frapsoft.com/typescript/awesome/typescript.png?v=101)
+![npm](https://img.shields.io/badge/npm-v7.0.0-blue.svg)
 
 Koa static file serving middleware base on [`koa-send`](https://github.com/koajs/send).
 
@@ -6,8 +8,8 @@ Koa static file serving middleware base on [`koa-send`](https://github.com/koajs
 
 Some new features compared to koa-static.
 
-- Set the route map to static file directory
-- More than `GET` and `HEAD`
+- :monkey:Set the route map to static file directory
+- :sunny:More than `GET` and `HEAD`
 - :coffee:Develop with Typescript
 
 ## Installation
