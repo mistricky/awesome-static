@@ -2,11 +2,15 @@
   "extends": "./node_modules/@magicspace/configs/tsconfig.json",
   "compilerOptions": {
     "target": "es5",
-    "module": "esnext",
+    "module": "commonjs",
     "rootDir": "./src",
     "outDir": "./bld",
-    "lib": ["esnext", "es2015"]
+    "lib": ["esnext", "es2015"],
+    "moduleResolution": "node",
+    "plugins": [{"name": "tslint-language-service"}],
+    "declaration": true
   },
+
   "include": ["./src/**/*.ts"],
   "exclude": ["node_modules"]
 }
