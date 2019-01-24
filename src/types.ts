@@ -1,7 +1,8 @@
-import { Context } from "koa";
-import { Options } from "koa-static";
+import {Context} from 'koa';
 
-type HTTPMethods = "POST" | "GET" | "HEAD" | "PUT" | "DELETE";
+import {Options} from 'koa-static';
+
+type HTTPMethods = 'POST' | 'GET' | 'HEAD' | 'PUT' | 'DELETE';
 
 export interface AwesomeStaticOptions extends Options {
   route?: string;
@@ -10,7 +11,7 @@ export interface AwesomeStaticOptions extends Options {
 
 export type AwesomeStaticMiddleware = (
   ctx: Context,
-  next: NextFunction
+  next: NextFunction,
 ) => Promise<void>;
 
 export type NextFunction = () => Promise<unknown>;
