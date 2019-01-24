@@ -26,7 +26,7 @@ yarn add awesome-static
 
 ## Usage
 
-```
+```javascript
 const Koa = require('koa');
 const {AwesomeStatic} = require('awesome-static');
 const app = new Koa();
@@ -45,21 +45,21 @@ See `/example`.
 
 ## API
 
-```
+```javascript
 AwesomeStatic(root, options)
 ```
 
 - `root` root directory string. nothing above this root directory can be served (Type: `string`).
-- `opts` options object (Type:`AwesomeOptions`).
+- `options` options object (Type:`AwesomeOptions`).
 
-### [Type] AwesomeOptions
+#### [Type] AwesomeOptions
 
 Extends options from `koa-static`
 
 - `route` route for mapping to a static server (Type:`string`).
 - `allowMethods` HTTP method for allow access static file (Type:`HTTPMethod`).
 
-### [Type] HTTPMethod
+#### [Type] HTTPMethod
 
 `GET` | `HEAD` | `POST` | `PUT` | `DELETE`
 
