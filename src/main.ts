@@ -50,7 +50,7 @@ function generateMiddleware(
     next: NextFunction,
   ): Promise<void> {
     const {method, url} = ctx;
-    const {allowMethods, defer, route, index} = options;
+    const {allowMethods, defer, route} = options;
     let done: string | boolean = false;
 
     if (defer) {
