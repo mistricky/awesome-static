@@ -1,10 +1,10 @@
 {
   "name": "awesome-static",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "main": "./bld/main.js",
   "license": "MIT",
   "files": [
-    "./bld/**/*.js"
+    "bld"
   ],
   "devDependencies": {
     "@magicspace/configs": "^0.1.46",
