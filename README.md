@@ -50,7 +50,7 @@ AwesomeStatic(root, options)
 ```
 
 - `root` root directory string. nothing above this root directory can be served (Type: `string`).
-- `opts` options object (Type:`AwesomeOptions`).
+- `options` options object (Type:`AwesomeOptions`).
 
 #### [Type] AwesomeOptions
 
