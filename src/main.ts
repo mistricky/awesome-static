@@ -22,23 +22,24 @@ function processOptions(
   return options;
 }
 
-function matchRoute(url: string, route: string): boolean {
+function matchRoute(url: string, route: string): string | undefined {
   let result = /^\/?(.+?)\/?$/.exec(route);
 
   if (!result) {
     throw new Error('Please enter the correct route');
   }
 
-  route = result[1];
-  const routes = [`${route}/`, `/${route}`, `/${route}/`, route];
-
-  for (let r of routes) {
-    if (url === r) {
-      return true;
-    }
+  if (route !== '/') {
+    route = result[1];
   }
 
-  return false;
+  result = new RegExp(`^/${route}(.*)`).exec(url);
+
+  if (!result) {
+    return undefined;
+  } else {
+    return result[1];
+  }
 }
 
 function generateMiddleware(
@@ -60,18 +61,16 @@ function generateMiddleware(
       }
     }
 
-    let result = /(.+?)([^\/]+)$/.exec(url);
-    let filename: string = result ? result[2] : (index as string);
-    let parsedUrl = (result && result[1]) || url;
+    let result = matchRoute(url, route || '/');
 
     if (
       allowMethods!
         .map(method => method.toUpperCase())
         .includes(method as HTTPMethod) &&
-      matchRoute(parsedUrl, route || '/')
+      result
     ) {
       try {
-        done = await send(ctx, filename, options);
+        done = await send(ctx, result, options);
       } catch (e) {
         if (e.status !== 404) {
           throw e;
