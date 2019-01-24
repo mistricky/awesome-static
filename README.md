@@ -1,7 +1,6 @@
-# Awesome-Static
-[![Build Status](https://www.travis-ci.org/HaoDaWang/awesome-static.svg?branch=master)](https://www.travis-ci.org/HaoDaWang/awesome-static)
-![npm](https://img.shields.io/badge/npm-v7.0.0-blue.svg)
-![TypeScript](https://badges.frapsoft.com/typescript/awesome/typescript.png?v=101)
+# Awesome-Static [![Build Status](https://www.travis-ci.org/HaoDaWang/awesome-static.svg?branch=master)](https://www.travis-ci.org/HaoDaWang/awesome-static) ![npm](https://img.shields.io/badge/npm-v7.0.0-blue.svg) ![TypeScript](https://badges.frapsoft.com/typescript/awesome/typescript.png?v=101)
+
+
 
 
 Koa static file serving middleware base on [`koa-send`](https://github.com/koajs/send).
