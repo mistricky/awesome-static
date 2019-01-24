@@ -26,7 +26,7 @@ yarn add awesome-static
 
 ## Usage
 
-```
+```javascript
 const Koa = require('koa');
 const {AwesomeStatic} = require('awesome-static');
 const app = new Koa();
