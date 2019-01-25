@@ -3,6 +3,9 @@
   "version": "1.4.3",
   "main": "./bld/main.js",
   "license": "MIT",
+  "scripts": {
+    "prepublish": "gulp"
+  },
   "files": [
     "bld"
   ],
