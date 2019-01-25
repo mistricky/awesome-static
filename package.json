@@ -19,6 +19,9 @@
     "tslint-language-service": "^0.9.9",
     "typescript": "^3.2.4"
   },
+  "peerDependencies": {
+    "tslib": "*"
+  },
   "dependencies": {
     "gulp": "^4.0.0",
     "gulp-uglify": "^3.0.1",
