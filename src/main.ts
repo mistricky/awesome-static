@@ -84,7 +84,7 @@ function generateMiddleware(
   };
 }
 
-export function AwesomeStatic(
+function AwesomeStatic(
   root: string,
   options?: AwesomeStaticOptions,
 ): AwesomeStaticMiddleware {
@@ -92,3 +92,6 @@ export function AwesomeStatic(
 
   return generateMiddleware(options);
 }
+
+export default AwesomeStatic;
+module.exports = AwesomeStatic;

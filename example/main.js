@@ -1,9 +1,9 @@
 const Koa = require('koa');
 const app = new Koa();
-const {AwesomeStatic} = require('..');
+const static = require('..');
 
 app.use(
-  AwesomeStatic('public', {
+  static('public', {
     allowMethods: ['GET', 'HEAD', 'POST'],
     route: 'hello',
   }),
