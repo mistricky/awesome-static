@@ -1,8 +1,5 @@
 # Awesome-Static [![Build Status](https://www.travis-ci.org/HaoDaWang/awesome-static.svg?branch=master)](https://www.travis-ci.org/HaoDaWang/awesome-static) ![npm](https://img.shields.io/badge/npm-v7.0.0-blue.svg) ![TypeScript](https://badges.frapsoft.com/typescript/awesome/typescript.png?v=101)
 
-
-
-
 Koa static file serving middleware base on [`koa-send`](https://github.com/koajs/send).
 
 ## Feature
@@ -31,11 +28,11 @@ yarn add awesome-static
 
 ```javascript
 const Koa = require('koa');
-const {AwesomeStatic} = require('awesome-static');
+const static = require('awesome-static');
 const app = new Koa();
 
 app.use(
-  AwesomeStatic('public', {
+  static('public', {
     allowMethods: ['GET', 'HEAD', 'POST'],
     route: 'hello',
   }),
@@ -49,7 +46,7 @@ See `/example`.
 ## API
 
 ```javascript
-AwesomeStatic(root, options)
+AwesomeStatic(root, options);
 ```
 
 - `root` root directory string. nothing above this root directory can be served (Type: `string`).
